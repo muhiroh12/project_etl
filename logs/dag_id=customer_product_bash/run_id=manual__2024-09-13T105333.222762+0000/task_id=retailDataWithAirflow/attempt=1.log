@@ -1,0 +1,51 @@
+[2024-09-13T10:53:37.716+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-13T10:53:37.768+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-13T10:53:33.222762+00:00 [queued]>
+[2024-09-13T10:53:37.790+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-13T10:53:33.222762+00:00 [queued]>
+[2024-09-13T10:53:37.792+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-13T10:53:37.834+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): retailDataWithAirflow> on 2024-09-13 10:53:33.222762+00:00
+[2024-09-13T10:53:37.848+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4789) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-13T10:53:37.852+0000] {standard_task_runner.py:72} INFO - Started process 4790 to run task
+[2024-09-13T10:53:37.852+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_product_bash', 'retailDataWithAirflow', 'manual__2024-09-13T10:53:33.222762+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/retailData_dags.py', '--cfg-path', '/tmp/tmp7_4_9sjy']
+[2024-09-13T10:53:37.855+0000] {standard_task_runner.py:105} INFO - Job 96: Subtask retailDataWithAirflow
+[2024-09-13T10:53:37.971+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-13T10:53:33.222762+00:00 [running]> on host 9c5d837b6f3b
+[2024-09-13T10:53:38.172+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='customer_product_bash' AIRFLOW_CTX_TASK_ID='retailDataWithAirflow' AIRFLOW_CTX_EXECUTION_DATE='2024-09-13T10:53:33.222762+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-13T10:53:33.222762+00:00'
+[2024-09-13T10:53:38.174+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-13T10:53:38.206+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-13T10:53:38.208+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/retailDataWithAirflow.py']
+[2024-09-13T10:53:38.229+0000] {subprocess.py:86} INFO - Output:
+[2024-09-13T10:53:41.130+0000] {subprocess.py:93} INFO - /opt/***/dags/script/retailDataWithAirflow.py:116: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T10:53:41.131+0000] {subprocess.py:93} INFO -   df.to_sql(name=self.table_name, con=raw_conn, index=False, if_exists='replace')
+[2024-09-13T10:53:41.551+0000] {subprocess.py:93} INFO - /opt/***/dags/script/retailDataWithAirflow.py:116: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T10:53:41.552+0000] {subprocess.py:93} INFO -   df.to_sql(name=self.table_name, con=raw_conn, index=False, if_exists='replace')
+[2024-09-13T10:53:41.557+0000] {subprocess.py:93} INFO - Error loading data to database: Execution failed on sql '
+[2024-09-13T10:53:41.558+0000] {subprocess.py:93} INFO -         SELECT
+[2024-09-13T10:53:41.559+0000] {subprocess.py:93} INFO -             name
+[2024-09-13T10:53:41.561+0000] {subprocess.py:93} INFO -         FROM
+[2024-09-13T10:53:41.562+0000] {subprocess.py:93} INFO -             sqlite_master
+[2024-09-13T10:53:41.563+0000] {subprocess.py:93} INFO -         WHERE
+[2024-09-13T10:53:41.564+0000] {subprocess.py:93} INFO -             type IN ('table', 'view')
+[2024-09-13T10:53:41.565+0000] {subprocess.py:93} INFO -             AND name=?;
+[2024-09-13T10:53:41.566+0000] {subprocess.py:93} INFO -         ': syntax error at or near ";"
+[2024-09-13T10:53:41.567+0000] {subprocess.py:93} INFO - LINE 8:             AND name=?;
+[2024-09-13T10:53:41.569+0000] {subprocess.py:93} INFO -                               ^
+[2024-09-13T10:53:41.570+0000] {subprocess.py:93} INFO - 
+[2024-09-13T10:53:41.571+0000] {subprocess.py:93} INFO - Error loading data to database: Execution failed on sql '
+[2024-09-13T10:53:41.572+0000] {subprocess.py:93} INFO -         SELECT
+[2024-09-13T10:53:41.573+0000] {subprocess.py:93} INFO -             name
+[2024-09-13T10:53:41.574+0000] {subprocess.py:93} INFO -         FROM
+[2024-09-13T10:53:41.576+0000] {subprocess.py:93} INFO -             sqlite_master
+[2024-09-13T10:53:41.577+0000] {subprocess.py:93} INFO -         WHERE
+[2024-09-13T10:53:41.578+0000] {subprocess.py:93} INFO -             type IN ('table', 'view')
+[2024-09-13T10:53:41.579+0000] {subprocess.py:93} INFO -             AND name=?;
+[2024-09-13T10:53:41.581+0000] {subprocess.py:93} INFO -         ': syntax error at or near ";"
+[2024-09-13T10:53:41.582+0000] {subprocess.py:93} INFO - LINE 8:             AND name=?;
+[2024-09-13T10:53:41.583+0000] {subprocess.py:93} INFO -                               ^
+[2024-09-13T10:53:41.584+0000] {subprocess.py:93} INFO - 
+[2024-09-13T10:53:41.751+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-13T10:53:41.809+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-13T10:53:41.811+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_product_bash, task_id=retailDataWithAirflow, run_id=manual__2024-09-13T10:53:33.222762+00:00, execution_date=20240913T105333, start_date=20240913T105337, end_date=20240913T105341
+[2024-09-13T10:53:41.877+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-13T10:53:41.919+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-13T10:53:41.923+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,105 @@
+[2024-09-13T16:50:05.029+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-13T16:50:05.045+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_postgres.testPostgres manual__2024-09-13T16:50:01.795961+00:00 [queued]>
+[2024-09-13T16:50:05.053+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_postgres.testPostgres manual__2024-09-13T16:50:01.795961+00:00 [queued]>
+[2024-09-13T16:50:05.053+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-13T16:50:05.066+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): testPostgres> on 2024-09-13 16:50:01.795961+00:00
+[2024-09-13T16:50:05.072+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=104) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-13T16:50:05.074+0000] {standard_task_runner.py:72} INFO - Started process 105 to run task
+[2024-09-13T16:50:05.074+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_postgres', 'testPostgres', 'manual__2024-09-13T16:50:01.795961+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/test_postgres_dags.py', '--cfg-path', '/tmp/tmpifn07jeb']
+[2024-09-13T16:50:05.074+0000] {standard_task_runner.py:105} INFO - Job 115: Subtask testPostgres
+[2024-09-13T16:50:05.112+0000] {task_command.py:467} INFO - Running <TaskInstance: test_postgres.testPostgres manual__2024-09-13T16:50:01.795961+00:00 [running]> on host 0ab8a86b614c
+[2024-09-13T16:50:05.180+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_postgres' AIRFLOW_CTX_TASK_ID='testPostgres' AIRFLOW_CTX_EXECUTION_DATE='2024-09-13T16:50:01.795961+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-13T16:50:01.795961+00:00'
+[2024-09-13T16:50:05.181+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-13T16:50:05.194+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-13T16:50:05.194+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/testpostgres.py']
+[2024-09-13T16:50:05.207+0000] {subprocess.py:86} INFO - Output:
+[2024-09-13T16:50:06.446+0000] {subprocess.py:93} INFO - /opt/***/dags/script/testpostgres.py:11: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:50:06.446+0000] {subprocess.py:93} INFO -   read_test = pd.read_sql('SELECT * FROM test_*** WHERE jenis_kelamin=\'L\'', engine)
+[2024-09-13T16:50:06.447+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-09-13T16:50:06.447+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/script/testpostgres.py", line 11, in <module>
+[2024-09-13T16:50:06.447+0000] {subprocess.py:93} INFO -     read_test = pd.read_sql('SELECT * FROM test_*** WHERE jenis_kelamin=\'L\'', engine)
+[2024-09-13T16:50:06.448+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-09-13T16:50:06.448+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+[2024-09-13T16:50:06.449+0000] {subprocess.py:93} INFO -     return pandas_sql.read_query(
+[2024-09-13T16:50:06.449+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^
+[2024-09-13T16:50:06.449+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+[2024-09-13T16:50:06.450+0000] {subprocess.py:93} INFO -     cursor = self.execute(sql, params)
+[2024-09-13T16:50:06.450+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-09-13T16:50:06.450+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+[2024-09-13T16:50:06.451+0000] {subprocess.py:93} INFO -     cur = self.con.cursor()
+[2024-09-13T16:50:06.451+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^
+[2024-09-13T16:50:06.451+0000] {subprocess.py:93} INFO - AttributeError: 'Engine' object has no attribute 'cursor'
+[2024-09-13T16:50:06.557+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-09-13T16:50:06.569+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-13T16:50:06.582+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=test_postgres, task_id=testPostgres, run_id=manual__2024-09-13T16:50:01.795961+00:00, execution_date=20240913T165001, start_date=20240913T165005, end_date=20240913T165006
+[2024-09-13T16:50:06.596+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-13T16:50:06.596+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 115 for task testPostgres (Bash command failed. The command returned a non-zero exit code 1.; 105)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-13T16:50:06.612+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-09-13T16:50:06.634+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-13T16:50:06.636+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

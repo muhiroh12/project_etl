@@ -1,0 +1,24 @@
+[2024-09-14T16:42:49.786+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-14T16:42:49.818+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_pgadmin.say_welcome_pgadmin manual__2024-09-14T16:42:48.085914+00:00 [queued]>
+[2024-09-14T16:42:49.837+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_pgadmin.say_welcome_pgadmin manual__2024-09-14T16:42:48.085914+00:00 [queued]>
+[2024-09-14T16:42:49.839+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-14T16:42:49.866+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): say_welcome_pgadmin> on 2024-09-14 16:42:48.085914+00:00
+[2024-09-14T16:42:49.876+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=882) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-14T16:42:49.879+0000] {standard_task_runner.py:72} INFO - Started process 883 to run task
+[2024-09-14T16:42:49.880+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_pgadmin', 'say_welcome_pgadmin', 'manual__2024-09-14T16:42:48.085914+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/test_pgadmin_dags.py', '--cfg-path', '/tmp/tmpcm3jat16']
+[2024-09-14T16:42:49.882+0000] {standard_task_runner.py:105} INFO - Job 143: Subtask say_welcome_pgadmin
+[2024-09-14T16:42:49.960+0000] {task_command.py:467} INFO - Running <TaskInstance: test_pgadmin.say_welcome_pgadmin manual__2024-09-14T16:42:48.085914+00:00 [running]> on host 0a5b2fe35fbd
+[2024-09-14T16:42:50.135+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_pgadmin' AIRFLOW_CTX_TASK_ID='say_welcome_pgadmin' AIRFLOW_CTX_EXECUTION_DATE='2024-09-14T16:42:48.085914+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-14T16:42:48.085914+00:00'
+[2024-09-14T16:42:50.137+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-14T16:42:50.165+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-14T16:42:50.167+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Hallo !"']
+[2024-09-14T16:42:50.185+0000] {subprocess.py:86} INFO - Output:
+[2024-09-14T16:42:50.188+0000] {subprocess.py:93} INFO - Hallo !
+[2024-09-14T16:42:50.189+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-14T16:42:50.236+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-14T16:42:50.238+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=test_pgadmin, task_id=say_welcome_pgadmin, run_id=manual__2024-09-14T16:42:48.085914+00:00, execution_date=20240914T164248, start_date=20240914T164249, end_date=20240914T164250
+[2024-09-14T16:42:50.298+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-14T16:42:50.375+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-14T16:42:50.384+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

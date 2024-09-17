@@ -1,0 +1,109 @@
+[2024-09-12T18:39:30.036+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-12T18:39:30.077+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_airflow.testAirflow manual__2024-09-12T18:34:21.525914+00:00 [queued]>
+[2024-09-12T18:39:30.098+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_airflow.testAirflow manual__2024-09-12T18:34:21.525914+00:00 [queued]>
+[2024-09-12T18:39:30.099+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-09-12T18:39:30.138+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): testAirflow> on 2024-09-12 18:34:21.525914+00:00
+[2024-09-12T18:39:30.153+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=326) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-12T18:39:30.157+0000] {standard_task_runner.py:72} INFO - Started process 327 to run task
+[2024-09-12T18:39:30.157+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_***', 'testAirflow', 'manual__2024-09-12T18:34:21.525914+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/test_dags.py', '--cfg-path', '/tmp/tmpmx40csr1']
+[2024-09-12T18:39:30.159+0000] {standard_task_runner.py:105} INFO - Job 44: Subtask testAirflow
+[2024-09-12T18:39:30.273+0000] {task_command.py:467} INFO - Running <TaskInstance: test_airflow.testAirflow manual__2024-09-12T18:34:21.525914+00:00 [running]> on host 9c5d837b6f3b
+[2024-09-12T18:39:30.453+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_***' AIRFLOW_CTX_TASK_ID='testAirflow' AIRFLOW_CTX_EXECUTION_DATE='2024-09-12T18:34:21.525914+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-12T18:34:21.525914+00:00'
+[2024-09-12T18:39:30.455+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-12T18:39:30.486+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-12T18:39:30.488+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/testAirflow.py']
+[2024-09-12T18:39:30.515+0000] {subprocess.py:86} INFO - Output:
+[2024-09-12T18:39:32.575+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-09-12T18:39:32.577+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/script/testAirflow.py", line 5, in <module>
+[2024-09-12T18:39:32.582+0000] {subprocess.py:93} INFO -     df = pd.read_csv(path_csv)
+[2024-09-12T18:39:32.583+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^^^^^^
+[2024-09-12T18:39:32.585+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2024-09-12T18:39:32.586+0000] {subprocess.py:93} INFO -     return _read(filepath_or_buffer, kwds)
+[2024-09-12T18:39:32.587+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-09-12T18:39:32.588+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2024-09-12T18:39:32.589+0000] {subprocess.py:93} INFO -     parser = TextFileReader(filepath_or_buffer, **kwds)
+[2024-09-12T18:39:32.590+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-09-12T18:39:32.591+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2024-09-12T18:39:32.592+0000] {subprocess.py:93} INFO -     self._engine = self._make_engine(f, self.engine)
+[2024-09-12T18:39:32.593+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-09-12T18:39:32.594+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2024-09-12T18:39:32.595+0000] {subprocess.py:93} INFO -     self.handles = get_handle(
+[2024-09-12T18:39:32.596+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^
+[2024-09-12T18:39:32.597+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+[2024-09-12T18:39:32.598+0000] {subprocess.py:93} INFO -     handle = open(
+[2024-09-12T18:39:32.599+0000] {subprocess.py:93} INFO -              ^^^^^
+[2024-09-12T18:39:32.600+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: '/opt/***/dags/input/customer.csv'
+[2024-09-12T18:39:32.715+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-09-12T18:39:32.739+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-12T18:39:32.747+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=test_***, task_id=testAirflow, run_id=manual__2024-09-12T18:34:21.525914+00:00, execution_date=20240912T183421, start_date=20240912T183930, end_date=20240912T183932
+[2024-09-12T18:39:32.777+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-12T18:39:32.779+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 44 for task testAirflow (Bash command failed. The command returned a non-zero exit code 1.; 327)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-12T18:39:32.832+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-09-12T18:39:32.872+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-12T18:39:32.881+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

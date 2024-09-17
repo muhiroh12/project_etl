@@ -1,0 +1,29 @@
+[2024-09-15T17:11:04.741+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-15T17:11:04.788+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-15T17:11:01.452533+00:00 [queued]>
+[2024-09-15T17:11:04.807+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-15T17:11:01.452533+00:00 [queued]>
+[2024-09-15T17:11:04.809+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-15T17:11:04.837+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): retailDataWithAirflow> on 2024-09-15 17:11:01.452533+00:00
+[2024-09-15T17:11:04.849+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1060) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-15T17:11:04.853+0000] {standard_task_runner.py:72} INFO - Started process 1061 to run task
+[2024-09-15T17:11:04.852+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_product_bash', 'retailDataWithAirflow', 'manual__2024-09-15T17:11:01.452533+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/retailData_dags.py', '--cfg-path', '/tmp/tmpkx58vxq2']
+[2024-09-15T17:11:04.854+0000] {standard_task_runner.py:105} INFO - Job 25: Subtask retailDataWithAirflow
+[2024-09-15T17:11:04.954+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-15T17:11:01.452533+00:00 [running]> on host 6b58833345bd
+[2024-09-15T17:11:05.145+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='customer_product_bash' AIRFLOW_CTX_TASK_ID='retailDataWithAirflow' AIRFLOW_CTX_EXECUTION_DATE='2024-09-15T17:11:01.452533+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-15T17:11:01.452533+00:00'
+[2024-09-15T17:11:05.147+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-15T17:11:05.179+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-15T17:11:05.181+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/retailDataWithAirflow.py']
+[2024-09-15T17:11:05.201+0000] {subprocess.py:86} INFO - Output:
+[2024-09-15T17:11:08.519+0000] {subprocess.py:93} INFO - Error loading data to database: (psycopg2.OperationalError) connection to server at "host.docker.internal" (192.168.65.254), port 5432 failed: FATAL:  password authentication failed for user "***"
+[2024-09-15T17:11:08.521+0000] {subprocess.py:93} INFO - 
+[2024-09-15T17:11:08.522+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-09-15T17:11:08.524+0000] {subprocess.py:93} INFO - Error loading data to database: (psycopg2.OperationalError) connection to server at "host.docker.internal" (192.168.65.254), port 5432 failed: FATAL:  password authentication failed for user "***"
+[2024-09-15T17:11:08.525+0000] {subprocess.py:93} INFO - 
+[2024-09-15T17:11:08.527+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-09-15T17:11:08.701+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-15T17:11:08.763+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-15T17:11:08.764+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_product_bash, task_id=retailDataWithAirflow, run_id=manual__2024-09-15T17:11:01.452533+00:00, execution_date=20240915T171101, start_date=20240915T171104, end_date=20240915T171108
+[2024-09-15T17:11:08.817+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-15T17:11:08.864+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-15T17:11:08.868+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,24 @@
+[2024-09-13T09:53:38.523+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-13T09:53:38.562+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_product_bash.say_end manual__2024-09-13T09:53:29.695042+00:00 [queued]>
+[2024-09-13T09:53:38.580+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_product_bash.say_end manual__2024-09-13T09:53:29.695042+00:00 [queued]>
+[2024-09-13T09:53:38.581+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-13T09:53:38.611+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): say_end> on 2024-09-13 09:53:29.695042+00:00
+[2024-09-13T09:53:38.622+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4047) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-13T09:53:38.625+0000] {standard_task_runner.py:72} INFO - Started process 4048 to run task
+[2024-09-13T09:53:38.626+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_product_bash', 'say_end', 'manual__2024-09-13T09:53:29.695042+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/retailData_dags.py', '--cfg-path', '/tmp/tmpb3pmog3v']
+[2024-09-13T09:53:38.628+0000] {standard_task_runner.py:105} INFO - Job 91: Subtask say_end
+[2024-09-13T09:53:38.712+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_product_bash.say_end manual__2024-09-13T09:53:29.695042+00:00 [running]> on host 9c5d837b6f3b
+[2024-09-13T09:53:38.894+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='customer_product_bash' AIRFLOW_CTX_TASK_ID='say_end' AIRFLOW_CTX_EXECUTION_DATE='2024-09-13T09:53:29.695042+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-13T09:53:29.695042+00:00'
+[2024-09-13T09:53:38.895+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-13T09:53:38.926+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-13T09:53:38.928+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Good Bye ..."']
+[2024-09-13T09:53:38.949+0000] {subprocess.py:86} INFO - Output:
+[2024-09-13T09:53:38.952+0000] {subprocess.py:93} INFO - Good Bye ...
+[2024-09-13T09:53:38.954+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-13T09:53:39.006+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-13T09:53:39.008+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_product_bash, task_id=say_end, run_id=manual__2024-09-13T09:53:29.695042+00:00, execution_date=20240913T095329, start_date=20240913T095338, end_date=20240913T095339
+[2024-09-13T09:53:39.086+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-13T09:53:39.119+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-13T09:53:39.124+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,460 @@
+[2024-09-13T16:05:12.329+0000] {processor.py:186} INFO - Started process (PID=24581) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:05:12.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:05:12.337+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:05:12.336+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:05:14.091+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:05:14.081+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:05:14.104+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:05:14.105+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:05:14.140+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.825 seconds
+[2024-09-13T16:05:44.347+0000] {processor.py:186} INFO - Started process (PID=24613) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:05:44.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:05:44.358+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:05:44.357+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:05:45.963+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:05:45.956+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:05:45.975+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:05:45.976+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:05:46.007+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.673 seconds
+[2024-09-13T16:06:16.525+0000] {processor.py:186} INFO - Started process (PID=24649) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:06:16.527+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:06:16.532+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:06:16.532+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:06:18.146+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:06:18.138+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:06:18.157+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:06:18.158+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:06:18.196+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.682 seconds
+[2024-09-13T16:06:48.779+0000] {processor.py:186} INFO - Started process (PID=24681) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:06:48.781+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:06:48.785+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:06:48.785+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:06:50.351+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:06:50.343+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:06:50.363+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:06:50.364+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:06:50.402+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.636 seconds
+[2024-09-13T16:07:21.536+0000] {processor.py:186} INFO - Started process (PID=24718) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:07:21.538+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:07:21.545+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:07:21.544+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:07:23.154+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:07:23.146+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:07:23.165+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:07:23.166+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:07:23.199+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.681 seconds
+[2024-09-13T16:07:53.425+0000] {processor.py:186} INFO - Started process (PID=24753) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:07:53.427+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:07:53.431+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:07:53.431+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:07:54.892+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:07:54.884+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:07:54.903+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:07:54.904+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:07:54.943+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.530 seconds
+[2024-09-13T16:08:25.177+0000] {processor.py:186} INFO - Started process (PID=24785) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:08:25.179+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:08:25.186+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:08:25.185+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:08:26.732+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:08:26.724+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:08:26.744+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:08:26.745+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:08:26.777+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.615 seconds
+[2024-09-13T16:08:57.717+0000] {processor.py:186} INFO - Started process (PID=24818) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:08:57.719+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:08:57.725+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:08:57.724+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:08:59.231+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:08:59.223+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:08:59.241+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:08:59.243+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:08:59.275+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.573 seconds
+[2024-09-13T16:09:29.663+0000] {processor.py:186} INFO - Started process (PID=24850) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:09:29.666+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:09:29.672+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:09:29.671+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:09:31.219+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:09:31.211+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:09:31.231+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:09:31.233+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:09:31.271+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.623 seconds
+[2024-09-13T16:10:02.033+0000] {processor.py:186} INFO - Started process (PID=24882) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:02.036+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:10:02.041+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:10:02.040+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:03.633+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:10:03.625+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 10, in <module>
+    read_test = sqldf('select * from test_airflow where jenis_kelamin="L"')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 156, in sqldf
+    return PandaSQL(db_uri)(query, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandasql/sqldf.py", line 61, in __call__
+    result = read_sql(query, conn)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 706, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'cursor'
+[2024-09-13T16:10:03.644+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:10 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:10:03.645+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:03.675+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.655 seconds
+[2024-09-13T16:10:05.986+0000] {processor.py:186} INFO - Started process (PID=24886) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:05.988+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:10:05.996+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:10:05.995+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:07.042+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:10:07.028+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 11, in <module>
+    read_test = pd.read_sql_query('SELECT * FROM test_airflow WHERE jenis_kelamin=\'L\'', con=engine)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 526, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Engine' object has no attribute 'cursor'
+[2024-09-13T16:10:07.056+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:11 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:10:07.057+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:07.094+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.122 seconds
+[2024-09-13T16:10:37.423+0000] {processor.py:186} INFO - Started process (PID=24918) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:37.425+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:10:37.432+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:10:37.431+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:38.411+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:10:38.396+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 11, in <module>
+    read_test = pd.read_sql_query('SELECT * FROM test_airflow WHERE jenis_kelamin=\'L\'', con=engine)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 526, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Engine' object has no attribute 'cursor'
+[2024-09-13T16:10:38.426+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:11 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:10:38.427+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:10:38.466+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.057 seconds
+[2024-09-13T16:11:08.900+0000] {processor.py:186} INFO - Started process (PID=24956) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:11:08.902+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:11:08.909+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:11:08.908+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:11:09.801+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:11:09.788+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 11, in <module>
+    read_test = pd.read_sql_query('SELECT * FROM test_airflow WHERE jenis_kelamin=\'L\'', con=engine)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 526, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Engine' object has no attribute 'cursor'
+[2024-09-13T16:11:09.811+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:11 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:11:09.813+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:11:09.849+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 0.960 seconds
+[2024-09-13T16:11:40.579+0000] {processor.py:186} INFO - Started process (PID=24988) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:11:40.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:11:40.590+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:11:40.589+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:11:41.528+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:11:41.514+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 11, in <module>
+    read_test = pd.read_sql_query('SELECT * FROM test_airflow WHERE jenis_kelamin=\'L\'', con=engine)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 526, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Engine' object has no attribute 'cursor'
+[2024-09-13T16:11:41.542+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:11 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:11:41.544+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:11:41.585+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.022 seconds
+[2024-09-13T16:12:11.917+0000] {processor.py:186} INFO - Started process (PID=25020) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:12:11.920+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:12:11.927+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:12:11.926+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:12:12.867+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:12:12.853+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 11, in <module>
+    read_test = pd.read_sql_query('SELECT * FROM test_airflow WHERE jenis_kelamin=\'L\'', con=engine)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 526, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Engine' object has no attribute 'cursor'
+[2024-09-13T16:12:12.880+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:11 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:12:12.881+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:12:12.919+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.016 seconds
+[2024-09-13T16:12:43.640+0000] {processor.py:186} INFO - Started process (PID=25053) to work on /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:12:43.642+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/script/test_postgres.py for tasks to queue
+[2024-09-13T16:12:43.648+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:12:43.647+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:12:44.625+0000] {logging_mixin.py:190} INFO - [2024-09-13T16:12:44.610+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/script/test_postgres.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/script/test_postgres.py", line 11, in <module>
+    read_test = pd.read_sql_query('SELECT * FROM test_airflow WHERE jenis_kelamin=\'L\'', con=engine)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 526, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2738, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 2672, in execute
+    cur = self.con.cursor()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Engine' object has no attribute 'cursor'
+[2024-09-13T16:12:44.637+0000] {logging_mixin.py:190} WARNING - /opt/airflow/dags/script/test_postgres.py:11 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T16:12:44.639+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/script/test_postgres.py
+[2024-09-13T16:12:44.678+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/script/test_postgres.py took 1.051 seconds

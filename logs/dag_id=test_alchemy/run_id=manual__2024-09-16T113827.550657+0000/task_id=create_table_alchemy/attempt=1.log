@@ -1,0 +1,26 @@
+[2024-09-16T11:38:32.157+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-16T11:38:32.191+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_alchemy.create_table_alchemy manual__2024-09-16T11:38:27.550657+00:00 [queued]>
+[2024-09-16T11:38:32.213+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_alchemy.create_table_alchemy manual__2024-09-16T11:38:27.550657+00:00 [queued]>
+[2024-09-16T11:38:32.214+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-16T11:38:32.261+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): create_table_alchemy> on 2024-09-16 11:38:27.550657+00:00
+[2024-09-16T11:38:32.273+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1702) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-16T11:38:32.276+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_alchemy', 'create_table_alchemy', 'manual__2024-09-16T11:38:27.550657+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/test_alchemy_dags.py', '--cfg-path', '/tmp/tmpwg6r29mb']
+[2024-09-16T11:38:32.277+0000] {standard_task_runner.py:72} INFO - Started process 1706 to run task
+[2024-09-16T11:38:32.279+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask create_table_alchemy
+[2024-09-16T11:38:32.364+0000] {task_command.py:467} INFO - Running <TaskInstance: test_alchemy.create_table_alchemy manual__2024-09-16T11:38:27.550657+00:00 [running]> on host 9978fde86398
+[2024-09-16T11:38:32.566+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_alchemy' AIRFLOW_CTX_TASK_ID='create_table_alchemy' AIRFLOW_CTX_EXECUTION_DATE='2024-09-16T11:38:27.550657+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-16T11:38:27.550657+00:00'
+[2024-09-16T11:38:32.568+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-16T11:38:32.601+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-16T11:38:32.603+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/test_alchemy.py']
+[2024-09-16T11:38:32.626+0000] {subprocess.py:86} INFO - Output:
+[2024-09-16T11:38:36.367+0000] {subprocess.py:93} INFO - Error loading data to database: (psycopg2.OperationalError) connection to server at "host.docker.internal" (192.168.65.254), port 5433 failed: FATAL:  database "test_database" does not exist
+[2024-09-16T11:38:36.368+0000] {subprocess.py:93} INFO - 
+[2024-09-16T11:38:36.370+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-09-16T11:38:36.562+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-16T11:38:36.615+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-16T11:38:36.617+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=test_alchemy, task_id=create_table_alchemy, run_id=manual__2024-09-16T11:38:27.550657+00:00, execution_date=20240916T113827, start_date=20240916T113832, end_date=20240916T113836
+[2024-09-16T11:38:36.682+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-16T11:38:36.734+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-16T11:38:36.739+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

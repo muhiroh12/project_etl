@@ -1,0 +1,22 @@
+[2024-09-13T05:01:59.767+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-13T05:01:59.803+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_green_trip_data_python_opr.say_end manual__2024-09-13T05:01:51.626060+00:00 [queued]>
+[2024-09-13T05:01:59.821+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_green_trip_data_python_opr.say_end manual__2024-09-13T05:01:51.626060+00:00 [queued]>
+[2024-09-13T05:01:59.822+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-13T05:01:59.851+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): say_end> on 2024-09-13 05:01:51.626060+00:00
+[2024-09-13T05:01:59.865+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=703) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-13T05:01:59.868+0000] {standard_task_runner.py:72} INFO - Started process 705 to run task
+[2024-09-13T05:01:59.869+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_green_trip_data_python_opr', 'say_end', 'manual__2024-09-13T05:01:51.626060+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/test_dags_python_opr.py', '--cfg-path', '/tmp/tmpi7ifnpxf']
+[2024-09-13T05:01:59.873+0000] {standard_task_runner.py:105} INFO - Job 67: Subtask say_end
+[2024-09-13T05:01:59.968+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_green_trip_data_python_opr.say_end manual__2024-09-13T05:01:51.626060+00:00 [running]> on host 9c5d837b6f3b
+[2024-09-13T05:02:00.465+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='etl_green_trip_data_python_opr' AIRFLOW_CTX_TASK_ID='say_end' AIRFLOW_CTX_EXECUTION_DATE='2024-09-13T05:01:51.626060+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-13T05:01:51.626060+00:00'
+[2024-09-13T05:02:00.467+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-13T05:02:00.493+0000] {logging_mixin.py:190} INFO - This task is executed after run task welcome, transform_csv and trans- form_json
+[2024-09-13T05:02:00.494+0000] {logging_mixin.py:190} INFO - End
+[2024-09-13T05:02:00.496+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-13T05:02:00.521+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-13T05:02:00.523+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_green_trip_data_python_opr, task_id=say_end, run_id=manual__2024-09-13T05:01:51.626060+00:00, execution_date=20240913T050151, start_date=20240913T050159, end_date=20240913T050200
+[2024-09-13T05:02:00.571+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-13T05:02:00.601+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-13T05:02:00.605+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

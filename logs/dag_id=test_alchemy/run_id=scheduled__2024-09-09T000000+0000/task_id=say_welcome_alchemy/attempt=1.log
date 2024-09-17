@@ -1,0 +1,72 @@
+[2024-09-15T17:57:15.695+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-15T17:57:15.744+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [queued]>
+[2024-09-15T17:57:15.766+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [queued]>
+[2024-09-15T17:57:15.768+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-15T17:57:15.817+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): say_welcome_alchemy> on 2024-09-09 00:00:00+00:00
+[2024-09-15T17:57:15.832+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1656) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-15T17:57:15.837+0000] {standard_task_runner.py:72} INFO - Started process 1657 to run task
+[2024-09-15T17:57:15.836+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_alchemy', 'say_welcome_alchemy', 'scheduled__2024-09-09T00:00:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/test_alchemy_dags.py', '--cfg-path', '/tmp/tmpo7urkojs']
+[2024-09-15T17:57:15.840+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask say_welcome_alchemy
+[2024-09-15T17:57:15.949+0000] {task_command.py:467} INFO - Running <TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [running]> on host 6b58833345bd
+[2024-09-15T17:57:16.150+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_alchemy' AIRFLOW_CTX_TASK_ID='say_welcome_alchemy' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T00:00:00+00:00'
+[2024-09-15T17:57:16.152+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-15T17:57:16.183+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-15T17:57:16.186+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Hallo !"']
+[2024-09-15T17:57:16.211+0000] {subprocess.py:86} INFO - Output:
+[2024-09-15T17:57:16.214+0000] {subprocess.py:93} INFO - Hallo !
+[2024-09-15T17:57:16.215+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-15T17:57:16.280+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-15T17:57:16.283+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=test_alchemy, task_id=say_welcome_alchemy, run_id=scheduled__2024-09-09T00:00:00+00:00, execution_date=20240909T000000, start_date=20240915T175715, end_date=20240915T175716
+[2024-09-15T17:57:16.340+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-15T17:57:16.400+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-15T17:57:16.404+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-09-16T10:17:50.540+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-16T10:17:50.556+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [queued]>
+[2024-09-16T10:17:50.562+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [queued]>
+[2024-09-16T10:17:50.563+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-16T10:17:50.575+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): say_welcome_alchemy> on 2024-09-09 00:00:00+00:00
+[2024-09-16T10:17:50.582+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=444) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-16T10:17:50.584+0000] {standard_task_runner.py:72} INFO - Started process 445 to run task
+[2024-09-16T10:17:50.584+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_alchemy', 'say_welcome_alchemy', 'scheduled__2024-09-09T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/test_alchemy_dags.py', '--cfg-path', '/tmp/tmp_u10jji6']
+[2024-09-16T10:17:50.584+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask say_welcome_alchemy
+[2024-09-16T10:17:50.625+0000] {task_command.py:467} INFO - Running <TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [running]> on host 9978fde86398
+[2024-09-16T10:17:50.690+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_alchemy' AIRFLOW_CTX_TASK_ID='say_welcome_alchemy' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T00:00:00+00:00'
+[2024-09-16T10:17:50.691+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-16T10:17:50.720+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-16T10:17:50.721+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Hallo !"']
+[2024-09-16T10:17:50.733+0000] {subprocess.py:86} INFO - Output:
+[2024-09-16T10:17:50.737+0000] {subprocess.py:93} INFO - Hallo !
+[2024-09-16T10:17:50.738+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-16T10:17:50.759+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-16T10:17:50.760+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=test_alchemy, task_id=say_welcome_alchemy, run_id=scheduled__2024-09-09T00:00:00+00:00, execution_date=20240909T000000, start_date=20240916T101750, end_date=20240916T101750
+[2024-09-16T10:17:50.799+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-16T10:17:50.825+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-16T10:17:50.827+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-09-16T14:47:13.148+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-16T14:47:13.183+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [queued]>
+[2024-09-16T14:47:13.200+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [queued]>
+[2024-09-16T14:47:13.202+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-16T14:47:13.231+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): say_welcome_alchemy> on 2024-09-09 00:00:00+00:00
+[2024-09-16T14:47:13.243+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=353) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-16T14:47:13.245+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_alchemy', 'say_welcome_alchemy', 'scheduled__2024-09-09T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/test_alchemy_dags.py', '--cfg-path', '/tmp/tmp3xbtyype']
+[2024-09-16T14:47:13.247+0000] {standard_task_runner.py:72} INFO - Started process 354 to run task
+[2024-09-16T14:47:13.248+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask say_welcome_alchemy
+[2024-09-16T14:47:13.335+0000] {task_command.py:467} INFO - Running <TaskInstance: test_alchemy.say_welcome_alchemy scheduled__2024-09-09T00:00:00+00:00 [running]> on host e54c4d73c780
+[2024-09-16T14:47:13.490+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_alchemy' AIRFLOW_CTX_TASK_ID='say_welcome_alchemy' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T00:00:00+00:00'
+[2024-09-16T14:47:13.492+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-16T14:47:13.563+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-16T14:47:13.565+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Hallo !"']
+[2024-09-16T14:47:13.584+0000] {subprocess.py:86} INFO - Output:
+[2024-09-16T14:47:13.587+0000] {subprocess.py:93} INFO - Hallo !
+[2024-09-16T14:47:13.588+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-16T14:47:13.639+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-16T14:47:13.640+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=test_alchemy, task_id=say_welcome_alchemy, run_id=scheduled__2024-09-09T00:00:00+00:00, execution_date=20240909T000000, start_date=20240916T144713, end_date=20240916T144713
+[2024-09-16T14:47:13.708+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-16T14:47:13.769+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-16T14:47:13.780+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

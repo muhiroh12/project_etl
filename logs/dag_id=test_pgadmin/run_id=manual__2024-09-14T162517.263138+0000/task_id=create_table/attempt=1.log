@@ -1,0 +1,34 @@
+[2024-09-14T16:25:21.306+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-14T16:25:21.339+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_pgadmin.create_table manual__2024-09-14T16:25:17.263138+00:00 [queued]>
+[2024-09-14T16:25:21.359+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_pgadmin.create_table manual__2024-09-14T16:25:17.263138+00:00 [queued]>
+[2024-09-14T16:25:21.360+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-14T16:25:21.389+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): create_table> on 2024-09-14 16:25:17.263138+00:00
+[2024-09-14T16:25:21.400+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=597) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-14T16:25:21.402+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_pgadmin', 'create_table', 'manual__2024-09-14T16:25:17.263138+00:00', '--job-id', '135', '--raw', '--subdir', 'DAGS_FOLDER/test_pgadmin_dags.py', '--cfg-path', '/tmp/tmpsuh_qyqk']
+[2024-09-14T16:25:21.403+0000] {standard_task_runner.py:72} INFO - Started process 598 to run task
+[2024-09-14T16:25:21.405+0000] {standard_task_runner.py:105} INFO - Job 135: Subtask create_table
+[2024-09-14T16:25:21.484+0000] {task_command.py:467} INFO - Running <TaskInstance: test_pgadmin.create_table manual__2024-09-14T16:25:17.263138+00:00 [running]> on host 0a5b2fe35fbd
+[2024-09-14T16:25:21.669+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='test_pgadmin' AIRFLOW_CTX_TASK_ID='create_table' AIRFLOW_CTX_EXECUTION_DATE='2024-09-14T16:25:17.263138+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-14T16:25:17.263138+00:00'
+[2024-09-14T16:25:21.671+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-14T16:25:21.714+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-14T16:25:21.715+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/***_retail_pgadmin.py']
+[2024-09-14T16:25:21.734+0000] {subprocess.py:86} INFO - Output:
+[2024-09-14T16:25:29.140+0000] {subprocess.py:93} INFO - [2024-09-14T16:25:29.137+0000] {base.py:84} INFO - Retrieving connection 'retail_connection'
+[2024-09-14T16:25:29.165+0000] {subprocess.py:93} INFO - Successfully created table customer
+[2024-09-14T16:25:29.166+0000] {subprocess.py:93} INFO - [2024-09-14T16:25:29.164+0000] {base.py:84} INFO - Retrieving connection 'retail_connection'
+[2024-09-14T16:25:29.561+0000] {subprocess.py:93} INFO - Error loading data to database: column "country" of relation "customer" does not exist
+[2024-09-14T16:25:29.563+0000] {subprocess.py:93} INFO - LINE 1: ...tomer (customer_id, customer_name, email_address, country, p...
+[2024-09-14T16:25:29.564+0000] {subprocess.py:93} INFO -                                                              ^
+[2024-09-14T16:25:29.565+0000] {subprocess.py:93} INFO - 
+[2024-09-14T16:25:29.566+0000] {subprocess.py:93} INFO - [2024-09-14T16:25:29.560+0000] {base.py:84} INFO - Retrieving connection 'retail_connection'
+[2024-09-14T16:25:29.572+0000] {subprocess.py:93} INFO - Successfully created table product
+[2024-09-14T16:25:29.573+0000] {subprocess.py:93} INFO - [2024-09-14T16:25:29.571+0000] {base.py:84} INFO - Retrieving connection 'retail_connection'
+[2024-09-14T16:25:29.589+0000] {subprocess.py:93} INFO - Successfully loaded data into product
+[2024-09-14T16:25:30.318+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-14T16:25:30.368+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-14T16:25:30.370+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=test_pgadmin, task_id=create_table, run_id=manual__2024-09-14T16:25:17.263138+00:00, execution_date=20240914T162517, start_date=20240914T162521, end_date=20240914T162530
+[2024-09-14T16:25:30.423+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-14T16:25:30.463+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-14T16:25:30.468+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

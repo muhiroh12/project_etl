@@ -1,0 +1,35 @@
+[2024-09-15T17:07:42.582+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-15T17:07:42.622+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-15T17:07:38.536367+00:00 [queued]>
+[2024-09-15T17:07:42.639+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-15T17:07:38.536367+00:00 [queued]>
+[2024-09-15T17:07:42.641+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-15T17:07:42.676+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): retailDataWithAirflow> on 2024-09-15 17:07:38.536367+00:00
+[2024-09-15T17:07:42.689+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=962) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-15T17:07:42.693+0000] {standard_task_runner.py:72} INFO - Started process 963 to run task
+[2024-09-15T17:07:42.693+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_product_bash', 'retailDataWithAirflow', 'manual__2024-09-15T17:07:38.536367+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/retailData_dags.py', '--cfg-path', '/tmp/tmpyqmixzwc']
+[2024-09-15T17:07:42.695+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask retailDataWithAirflow
+[2024-09-15T17:07:42.795+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-15T17:07:38.536367+00:00 [running]> on host 6b58833345bd
+[2024-09-15T17:07:42.978+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='customer_product_bash' AIRFLOW_CTX_TASK_ID='retailDataWithAirflow' AIRFLOW_CTX_EXECUTION_DATE='2024-09-15T17:07:38.536367+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-15T17:07:38.536367+00:00'
+[2024-09-15T17:07:42.980+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-15T17:07:43.011+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-15T17:07:43.013+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/retailDataWithAirflow.py']
+[2024-09-15T17:07:43.037+0000] {subprocess.py:86} INFO - Output:
+[2024-09-15T17:07:46.215+0000] {subprocess.py:93} INFO - Error loading data to database: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+[2024-09-15T17:07:46.217+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2024-09-15T17:07:46.218+0000] {subprocess.py:93} INFO - connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+[2024-09-15T17:07:46.219+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2024-09-15T17:07:46.220+0000] {subprocess.py:93} INFO - 
+[2024-09-15T17:07:46.221+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-09-15T17:07:46.222+0000] {subprocess.py:93} INFO - Error loading data to database: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+[2024-09-15T17:07:46.223+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2024-09-15T17:07:46.224+0000] {subprocess.py:93} INFO - connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+[2024-09-15T17:07:46.225+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2024-09-15T17:07:46.226+0000] {subprocess.py:93} INFO - 
+[2024-09-15T17:07:46.228+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-09-15T17:07:46.388+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-15T17:07:46.449+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-15T17:07:46.451+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_product_bash, task_id=retailDataWithAirflow, run_id=manual__2024-09-15T17:07:38.536367+00:00, execution_date=20240915T170738, start_date=20240915T170742, end_date=20240915T170746
+[2024-09-15T17:07:46.502+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-15T17:07:46.549+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-15T17:07:46.553+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

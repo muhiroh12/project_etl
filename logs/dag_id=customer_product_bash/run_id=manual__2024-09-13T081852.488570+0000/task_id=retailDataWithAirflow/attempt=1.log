@@ -1,0 +1,29 @@
+[2024-09-13T08:18:54.651+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-13T08:18:54.666+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-13T08:18:52.488570+00:00 [queued]>
+[2024-09-13T08:18:54.673+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-13T08:18:52.488570+00:00 [queued]>
+[2024-09-13T08:18:54.674+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-13T08:18:54.686+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): retailDataWithAirflow> on 2024-09-13 08:18:52.488570+00:00
+[2024-09-13T08:18:54.692+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2680) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-13T08:18:54.693+0000] {standard_task_runner.py:72} INFO - Started process 2681 to run task
+[2024-09-13T08:18:54.693+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'customer_product_bash', 'retailDataWithAirflow', 'manual__2024-09-13T08:18:52.488570+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/retailData_dags.py', '--cfg-path', '/tmp/tmpntadh621']
+[2024-09-13T08:18:54.693+0000] {standard_task_runner.py:105} INFO - Job 72: Subtask retailDataWithAirflow
+[2024-09-13T08:18:54.728+0000] {task_command.py:467} INFO - Running <TaskInstance: customer_product_bash.retailDataWithAirflow manual__2024-09-13T08:18:52.488570+00:00 [running]> on host 9c5d837b6f3b
+[2024-09-13T08:18:54.793+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='customer_product_bash' AIRFLOW_CTX_TASK_ID='retailDataWithAirflow' AIRFLOW_CTX_EXECUTION_DATE='2024-09-13T08:18:52.488570+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-13T08:18:52.488570+00:00'
+[2024-09-13T08:18:54.794+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-13T08:18:54.806+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-13T08:18:54.807+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/script/retailDataWithAirflow.py']
+[2024-09-13T08:18:54.817+0000] {subprocess.py:86} INFO - Output:
+[2024-09-13T08:18:55.943+0000] {subprocess.py:93} INFO - /opt/***/dags/script/retailDataWithAirflow.py:115: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T08:18:55.943+0000] {subprocess.py:93} INFO -   df.to_sql(name=self.table_name, con=connection, index=False, if_exists='replace')
+[2024-09-13T08:18:56.074+0000] {subprocess.py:93} INFO - /opt/***/dags/script/retailDataWithAirflow.py:115: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-13T08:18:56.075+0000] {subprocess.py:93} INFO -   df.to_sql(name=self.table_name, con=connection, index=False, if_exists='replace')
+[2024-09-13T08:18:56.075+0000] {subprocess.py:93} INFO - Error loading data to database: 'Connection' object has no attribute 'cursor'
+[2024-09-13T08:18:56.076+0000] {subprocess.py:93} INFO - Error loading data to database: 'Connection' object has no attribute 'cursor'
+[2024-09-13T08:18:56.163+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-13T08:18:56.186+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-13T08:18:56.187+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=customer_product_bash, task_id=retailDataWithAirflow, run_id=manual__2024-09-13T08:18:52.488570+00:00, execution_date=20240913T081852, start_date=20240913T081854, end_date=20240913T081856
+[2024-09-13T08:18:56.230+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-13T08:18:56.248+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-13T08:18:56.251+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
